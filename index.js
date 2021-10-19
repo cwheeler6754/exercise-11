@@ -11,31 +11,36 @@ class House extends React.Component {
         }
     }
 
+// This is the problem part
     kitchen = ( action ) => {
         this.setState( prevState => {
             let rooms = { ...prevState.rooms };
             rooms.kitchen: !this.kitchen;
+// This specifically     ^
             return { rooms }
         });
     }
     bathroom = ( action ) => {
         this.setState( prevState => {
             let rooms = {...prevState.rooms};
-            rooms.bathroom: !this.state.bathroom;
+            rooms.bathroom: !this.bathroom;
+// This specifically      ^
             return { rooms }
         });
     }
     livingRoom = ( action ) => {
         this.setState( prevState => {
             let rooms = {...prevState.rooms};
-            rooms.livingRoom: !this.state.livingRoom
+            rooms.livingRoom: !this.livingRoom
+// This specifically        ^
             return { rooms }
         });
     }
     bedroom = ( action ) => {
         this.setState( prevState => {
             let rooms = {...prevState.rooms};
-            rooms.bedroom: !this.state.bedroom
+            rooms.bedroom: !this.bedroom
+// This specifically     ^
             return { rooms }
         });
     }
